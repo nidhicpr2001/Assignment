@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Profile Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+  
+        .card{max-width: 50%;background-color: #f2f3ae;margin: auto; 
+            padding: 60px  20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(219, 90, 16, 0.3);
+
+            text-align: center;transition: transform 0.3s ease-in-out;}
+        .profile{display: grid;place-items: center;}
+        .card:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #9de288, #74a0eb); /* Royal Blue Gradient */
+            color: white;
+        }
+        .icon ul li {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.icon ul li:hover {
+    transform: scale(1.2);
+    color: #fff !important;
+}
+        .name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .designation {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .bio {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #24232388;
+            font-weight: 400;
+            text-align: justify;
+        }
+        .img-resp{max-width: 100%;height: auto;border-radius: 50%;}
+        
+
+      ul{list-style: none;padding: 0;display: flex;justify-content: center;margin-top: 3rem;}
+      li{margin-right: 35px;font-size: 20px;color: #4267B2}
+      li:nth-child(2){color: #0a66c2;}
+      li:nth-child(3){color: #1DA1F2;}
+
+     
+        .container{max-width:1200px;margin:auto;padding:0 1rem;}
+.row{display: grid;grid-template-columns: repeat(12,1fr);gap: 2rem;}
+@media screen and (max-width:980px){
+    .bio{text-align: left;}
+}
+    </style>
+</head>
+<body>
+ <div class="wrap-1">
+    <div class="container">
+        <div class="card">
+        <div  class="profile">
+        <img src="profile.jpeg" alt="" width="240" height="320" class="img-resp">
+    </div>
+        <div class="name">John Doe</div> 
+        <div class="designation">Web Developer</div>
+        <p class="bio">Passionate Web Developer with a strong background in HTML, CSS, JavaScript, and modern frameworks. Skilled in building responsive, user-friendly websites and web applications with a focus on performance and accessibility. Always eager to learn new technologies and create seamless digital experiences.</p>
+        <div class="icon"><ul>
+        <li><i class="fa-brands fa-facebook"></i></li>
+        <li><i class="fa-brands fa-linkedin"></i></li>
+        <li><i class="fa-brands fa-twitter"></i></li>
+        </ul></div>
+    </div> 
+    </div>
+ </div>
+</body>
+</html>

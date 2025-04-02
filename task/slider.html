@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .slider-container {
+            max-width: 600px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .button-container {
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <img id="slider" src="" alt="Image Slider">
+    </div>
+    <div class="button-container">
+        <button onclick="prevImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+    </div>
+
+    <script>
+        const images = [
+            "https://wall2mob.com/m/wp-GalaxySWallpaperAutumnParkOnTheLake_33537-cprw.jpg?i=33537&w=320&h=240&fdl=0",
+            "https://wall2mob.com/m/wp-untitled_33373-cprw.jpg?i=33373&w=320&h=240&fdl=0",
+            "https://wall2mob.com/m/wp-LakeInNewZealandWallpaper_33680-cprw.jpg?i=33680&w=320&h=240&fdl=0"
+        ];
+        
+        let currentIndex = 0;
+        const slider = document.getElementById("slider");
+        
+        function showImage(index) {
+            slider.src = images[index];
+        }
+        
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+        
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+        
+        // Initialize the slider with the first image
+        showImage(currentIndex);
+    </script>
+</body>
+</html>
